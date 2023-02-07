@@ -1,0 +1,31 @@
+<div class="container">
+
+    <h1>Jugadores</h1>
+    <p>Conoce a todos nuestros jugadores son súper altos todos</p>
+
+    <hr>
+
+    <div class="row">
+
+        {{#each playersData}}
+
+        {{!-- <div class="col-md-4">
+            <div class="card mb-4 player-card">
+                <img src="{{photo}}" class="card-img-top" alt="{{name}} {{lastName}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}} {{lastName}}</h5>
+                    <p class="card-text">{{team}}</p>
+                </div>
+            </div>
+        </div>
+        --}}
+
+        {{>playerCard}}
+
+        {{/each}}
+
+    </div>
+
+    <a href="/" class="btn btn-dark mb-5">Volver a inicio</a>
+
+</div>

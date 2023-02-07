@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de reserva | Ironhack Spain</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h1>Información de reserva</h1>
+
+    <hr>
+
+    <p>Estos son los datos de tu reserva, {{name}}, para el bootcamp {{bootcamp}} en el campus de {{campus}}</p>
+
+    <hr>
+    <p>Asignaturas de tu formato</p>
+    <ul>
+        {{#each subjects}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+    <hr>
+
+    {{#if confirmed}}
+    <p>Tu Bootcamp está ya confirmado ponte con el prework pero ya</p>
+    {{else}}
+    <p>Tu bootcamp aún no ha sido confirmado</p>
+    {{/if}}
+
+    <hr>
+
+    {{#if debt}}
+    <p>Aún tienes un pago pendiente por valor de {{debt}}€</p>
+    {{/if}}
+
+    <hr>
+
+    {{#unless teacher}}
+    <p>AVISO! Aún no tienes profesor/a asignado/a</p>
+    {{/unless}}
+
+    <hr>
+
+    {{#with address}}
+    <p>Nos encontamos en la calle {{{street}}}, en {{city}}</p>
+    {{/with}}
+
+</body>
+
+</html>

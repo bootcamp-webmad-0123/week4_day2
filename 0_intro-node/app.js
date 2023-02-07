@@ -1,0 +1,1 @@
+console.log('Soy un script y no me comprende el equipo')
